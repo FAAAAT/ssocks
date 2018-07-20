@@ -107,7 +107,9 @@ void reverse_server(char *sockshost, int socksport,
     s_socks_conf conf;
     s_socks_client_config config_cli;
     s_socks_server_config config_srv;
-
+    
+    TRACE(L_VERBOSE, "ncon:[%d].",ncon);
+    
 #ifdef _WIN32
     WSADATA wsaData;
     int wsaInit = WSAStartup(MAKEWORD(2,2), &wsaData);
